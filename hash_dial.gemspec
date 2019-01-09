@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
     spec.authors       = ["Convincible"]
     spec.email         = ["development@convincible.media"]
 
-    spec.summary       = "Access (deeply nested) hash keys. Get the value, or nil on any error. (Even safer than Hash::dig)."
-    spec.description   = "Avoid all errors when accessing (deeply nested) Hash keys. Safer than dig(), as will quietly return nil (or your default) if the keys requested are invalid for any reason at all. Bonus: you don't even need to fiddle with existing code. If you have already written something to access a deep hash key (e.g. hash[:a][:b][:c]), just surround this with '.dial' and '.call'."
+    spec.summary       = "Access (deeply nested) hash keys. Get the value, or nil on any error. (Even safer than Hash::dig). Deprecated - use KeyDial."
+    spec.description   = "Avoid all errors when accessing (deeply nested) Hash keys. Safer than dig(), as will quietly return nil (or your default) if the keys requested are invalid for any reason at all. This gem is deprecated - use KeyDial instead, which does the same thing but works on Hashes, Arrays and Structs as well."
     spec.homepage      = "https://github.com/ConvincibleMedia/ruby-gem-hash_dial"
 
     # Specify which files should be added to the gem when it is released.
@@ -26,4 +26,6 @@ Gem::Specification.new do |spec|
     spec.add_development_dependency "bundler", "~> 1.17"
     spec.add_development_dependency "rake", "~> 10.0"
     spec.add_development_dependency "rspec", "~> 3.0"
+
+    spec.post_install_message = "The 'hash_dial' gem has been deprecated and replaced by 'key_dial'."
 end

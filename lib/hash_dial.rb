@@ -27,3 +27,5 @@ end
 class Hash
     include HashDial
 end
+
+warn "[DEPRECATION] HashDial has been deprecated and replaced by KeyDial. Please require 'key_dial' instead (this will not break any code)."
